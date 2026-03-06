@@ -1,0 +1,17 @@
+<li checked>
+    <div class="todo-item" (dblclick)="dbclick()">
+
+        <input *ngIf="edit" type="text" id="test_input" #inputRef (blur)="changeEdit()"  (keydown.enter)="changeEdit()"/>
+
+        <input *ngIf="!edit" type="checkbox" [checked]="todo.completed" class="li_checkbox" (change)="toggleTodo()"/>
+        <label *ngIf="!edit" class='check ' [ngClass]="todo.completed?'completed':''">
+            {{todo.text}}
+        </label>
+
+        <button *ngIf="!edit" class="destroy" (click)="removeTodo(todo)">
+            ✕
+        </button>
+
+
+    </div>
+</li>

@@ -1,0 +1,307 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+a{
+    text-decoration: none; 
+    color: inherit;       
+}
+
+a:link{
+    color:  rgb(152, 32, 27);
+}
+a:visited{
+    color:  rgb(152, 32, 27);
+}
+
+a:hover{
+    color:  rgb(71, 71, 71);
+    text-decoration: underline;
+}
+
+li{
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    
+}
+
+#left {
+    position: relative;
+    gap: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+ 
+    border: 1px solid #ccc;
+    overflow: auto;
+    min-height: 0;
+}
+
+
+
+
+#right{
+     width: 80%;
+    border: 1px solid #ccc;
+    overflow: auto;
+    min-height: 0;
+    background-color: #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+
+
+
+#input_m{
+    
+    width: 500px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 13px 60px;
+    font-size: 20px;
+    
+}
+
+#input_m:focus{
+    border-width: 2px;
+    outline: none;
+    border-color: rgba(187, 44, 39, 0.721);
+}
+
+#new_item{
+    position: relative;
+}
+
+.allCheck{
+    position: relative;
+}
+
+.allCheck input{
+    height: 0;
+    width: 0;
+}
+
+
+
+#allText{
+    display: inline-block;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 100%;
+    text-align: center;
+    left: 0;
+    font-size: 20px;
+   
+}
+
+.todo-item{
+    user-select: none;  
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 4px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid #ccc;
+ 
+
+
+}
+
+.todo-item:focus{
+     border-width: 2px;
+    border-color: rgba(187, 44, 39, 0.721);
+}
+
+
+
+.completed label{
+   
+    color: #747474;
+    text-decoration: line-through;
+}
+
+
+
+.destroy{
+    font-weight: bolder;
+    color: rgb(52, 46, 46);
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: absolute;
+    right: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.todo-item:hover .destroy{
+    opacity: 1;
+}
+.destroy:hover{
+    color:  rgba(152, 31, 27, 0.826);
+}
+
+.li_checkbox{
+    margin: 10px;
+    position: relative;
+  appearance: none; 
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  
+ 
+}
+
+.li_checkbox:checked {
+   
+    border-color: rgb(0, 118, 16);
+    color: white;
+
+}
+
+.li_checkbox:checked::before {
+    content: "✓"; 
+    color: rgb(0, 146, 46) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+}
+
+.check{
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  user-select: none;
+   
+}
+
+.completed{
+    color: #747474;
+    text-decoration: line-through;
+}
+
+#r_header{
+
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+#title{
+    color:  rgb(148, 38, 34);
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+
+.state_bar{
+    width: 500px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 1px 1px rgba(0,0,0,.2),0 8px 0 -3px #f6f6f6,0 9px 1px -3px rgba(0,0,0,.2),0 16px 0 -6px #f6f6f6,0 17px 2px -6px rgba(0,0,0,.2);
+}
+
+.changeurl{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(71, 71, 71);
+}
+
+.urlactive{
+    border: 1px solid rgb(187, 44, 39);
+    border-radius: 4px;
+    padding: 2px 8px;
+    color: rgb(187, 44, 39);
+}
+
+.active{
+    border: 1px solid rgb(187, 44, 39);
+    border-radius: 4px;
+    padding: 2px;
+
+    color: rgb(187, 44, 39);
+}
+
+#clear_completed{
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(71, 71, 71);
+    transition: all 0.3s ease-in-out;
+}
+
+#clear_completed:hover{
+
+    color: rgb(152, 31, 27);
+}
+
+#test_input{
+     width: 500px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 13px 60px;
+    font-size: 20px;
+
+}
+
+#test_input:focus{
+     border-width: 2px;
+    outline: none;
+    border-color: rgba(187, 44, 39, 0.721);
+}
+
+
+
+
+
+
+
+
+
+

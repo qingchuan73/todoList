@@ -1,0 +1,14 @@
+<header id="r_header">
+    <div id="title">你想做些什么</div>
+    <div id="main_input">
+      <input
+        id="input_m"
+        type="text"
+        name=""
+        placeholder="请输入待办事项"
+        [(ngModel)]="text"
+        autocomplete="off"
+        (keydown.enter)="addTodo()"
+      />
+    </div>
+  </header>

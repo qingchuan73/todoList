@@ -1,0 +1,13 @@
+<main id="main_item" *ngIf="todos.length > 0">
+  <ul id="new_item">
+    <label class="allCheck" style="cursor: pointer;display: block; height: 0;" (change)="toggleAll()">
+      <input type="checkbox" />
+      <span id="allText" [ngStyle]="{opacity:allCompleted?0.5:1}">∨</span>
+    </label>
+    
+    <app-todo-todoItem
+      *ngFor="let todo of todos; let i = index;"
+      [todo]="todo">
+    </app-todo-todoItem>
+  </ul>
+</main>

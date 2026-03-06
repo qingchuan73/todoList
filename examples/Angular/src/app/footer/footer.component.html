@@ -1,0 +1,7 @@
+  <footer id="r_footer">
+            <div id="state_bar" class="state_bar" >
+                <span id="items_left">{{length}}件待办项</span>
+                <button class="changeurl" [ngClass]="current==state?'active':''"  *ngFor="let state of stateArr; let i = index;" (click)="changeState(state)">{{state}}</button>
+                <button id="clear_completed" (click)="removeAll()">清除所有完成项</button>
+            </div >
+        </footer >

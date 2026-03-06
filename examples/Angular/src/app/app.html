@@ -1,0 +1,11 @@
+
+
+ <div id="container">
+    <app-todo-header ></app-todo-header>
+    <app-todo-todoList [filterState]="currentState" *ngIf="todos.length!=0"></app-todo-todoList>
+    <app-todo-footer (State)="handleState($event)" *ngIf="todos.length!=0"></app-todo-footer>
+  </div>
+<router-outlet />
+
+
+

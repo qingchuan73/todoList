@@ -1,0 +1,37 @@
+{
+  "name": "todolist-multi-framework",
+  "version": "1.0.0",
+  "description": "TodoList multi-framework comparison project (React, Vue, Angular, Vanilla JS)",
+  "main": "index.html",
+  "scripts": {
+    "dev:react": "cd examples/React && npm run dev",
+    "dev:vue": "cd examples/Vue && npm run dev",
+    "dev:angular": "cd examples/Angular && npm start",
+    "dev:vanilla": "cd examples/Vanilla JS && npm run dev",
+    "build:react": "cd examples/React && npm run build",
+    "build:vue": "cd examples/Vue && npm run build",
+    "build:angular": "cd examples/Angular && npm run build -- --base-href /todoList/",
+    "build:vanilla": "cd examples/Vanilla JS && npm run build",
+    "build:all": "npm run build:react && npm run build:vue && npm run build:angular && npm run build:vanilla",
+    "install:all": "cd examples/React && npm install && cd ../Vue && npm install && cd ../Angular && npm install && cd ../Vanilla JS && npm install",
+    "deploy": "gh-pages -d . -t true"
+  },
+  "keywords": [
+    "todomvc",
+    "react",
+    "vue",
+    "angular",
+    "javascript",
+    "frontend",
+    "comparison"
+  ],
+  "author": "qingchuan73",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qingchuan73/todoList.git"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}

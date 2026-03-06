@@ -1,0 +1,175 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+  text-decoration: none; 
+  color: inherit;       
+}
+
+.logo{
+    position: relative;
+    
+    width: 300px;
+}
+header{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+   
+
+}
+h1{
+    
+    font-size: 100px;
+    margin: 0;
+}
+
+#container{
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+#left_container{
+    width: 40%;
+}
+
+
+#left_container span{
+    font-weight: bold;
+    color: rgb(152, 32, 27);
+    display: block;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+#right_container span{
+   font-weight: bold;
+    color: rgb(152, 32, 27);
+    display: block;
+    margin-bottom: 20px;
+    font-size: 30px;
+    
+}
+
+#main{
+ 
+  margin-left: 250px;
+  margin-top: 50px;
+  margin-right: 250px;
+}
+
+#introduction{
+    font-size: 40px;
+    
+}
+
+.i_text{
+    color: rgb(104, 80, 79);
+    line-height: 2.0;
+}
+
+select{
+    padding: 10px;
+    border-radius:4px ;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 16px;
+    color:rgb(152, 32, 27);
+    width: 200px;
+    
+}
+
+
+
+select option{
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #ffffff;
+    color:rgb(152, 32, 27);
+}
+
+#show{
+    position: absolute;
+    right: 0px;
+    margin-left: 80px;
+    margin-top: 120px;
+    left: 40%;
+    top: 0px;
+    border-radius:4px ;
+    bottom: 0px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 5px 4px rgba(92, 89, 89, 0.701);
+}
+
+#show_container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+}
+
+.pre{
+    font-family: "华文彩云";
+    font-size: 50px;
+    color: rgb(152, 32, 27);
+    text-align: center;
+    
+}
+
+#show p{
+    position: relative;
+}
+
+.toolTip{
+    cursor: default;
+     display: none;
+    position: absolute;
+    bottom: 100%;
+    left:50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 300px;
+    z-index: 100;
+    font-size: 12px;
+    text-align: center;
+}
+
+.toolTip::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.about{
+    color: black;
+}
+
+.about:hover{
+    color: #878787;
+
+}
+
