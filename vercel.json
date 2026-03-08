@@ -1,11 +1,10 @@
 {
-  "buildCommand": "npm run build:all",
+  "buildCommand": "",
   "outputDirectory": "dist",
-  "installCommand": "npm install",
+  "installCommand": "",
   "framework": null,
   "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/:path((?!react|vue|angular|vanilla|assets|public).*)", "destination": "/index.html" }
+    { "source": "/", "destination": "/index.html" }
   ],
   "headers": [
     {
