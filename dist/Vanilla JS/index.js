@@ -323,16 +323,16 @@ const model = new Model()
 const view = new View()
 const controller = new Controller(model, view)
 
-fetch('../../public/sidebar/sidebar.html')
+fetch('./sidebar/sidebar.html')
   .then(res => res.text())
   .then(data => {
     document.querySelector('#left').innerHTML = data
     const link = document.createElement('link')
     link.rel = 'stylesheet'
-    link.href = '../../public/sidebar/sidebar.css'
+    link.href = './sidebar/sidebar.css'
     document.head.appendChild(link)
     const script = document.createElement('script')
-    script.src = '../../public/sidebar/sidebar.js'
+    script.src = './sidebar/sidebar.js'
     document.body.appendChild(script)
   }).catch(err => {
     console.log(err);
