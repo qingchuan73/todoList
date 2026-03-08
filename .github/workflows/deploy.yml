@@ -25,41 +25,47 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install React dependencies and build
+      # 创建统一的部署目录
+      - name: Create deploy directory
+        run: mkdir -p deploy
+
+      - name: Build and copy React
+        working-directory: examples/React
         run: |
-          cd examples/React
           npm install
           npm run build
-          cd ../..
+          cp -r dist ../../deploy/react
 
-      - name: Install Vue dependencies and build
+      - name: Build and copy Vue
+        working-directory: examples/Vue
         run: |
-          cd examples/Vue
           npm install
           npm run build
-          cd ../..
+          cp -r dist ../../deploy/vue
 
-      - name: Install Angular dependencies and build
+      - name: Build and copy Angular
+        working-directory: examples/Angular
         run: |
-          cd examples/Angular
           npm install
           npm run build -- --base-href /todoList/
-          cd ../..
+          cp -r dist ../../deploy/angular
 
-      - name: Install Vanilla JS dependencies and build
+      # 关键修复：加引号处理空格
+      - name: Build and copy Vanilla JS
+        working-directory: "examples/Vanilla JS"
         run: |
-          cd examples/Vanilla JS
           npm install
           npm run build
-          cd ../..
+          cp -r dist ../../deploy/vanilla
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      # 关键修复：上传构建产物，不是整个仓库
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "."
+          path: deploy
 
   deploy:
     environment:
