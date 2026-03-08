@@ -50,18 +50,24 @@ jobs:
           npm run build -- --base-href /todoList/
           cp -r dist ../../deploy/angular
 
-      # 关键修复：加引号处理空格
       - name: Build and copy Vanilla JS
-        working-directory: "examples/Vanilla JS"
+        working-directory: examples/Vanilla
         run: |
           npm install
           npm run build
           cp -r dist ../../deploy/vanilla
 
+      # 复制根目录文件
+      - name: Copy root files
+        run: |
+          cp index.html deploy/
+          cp -r assets deploy/
+          cp -r public deploy/ || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
-      # 关键修复：上传构建产物，不是整个仓库
+      # 上传构建产物
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

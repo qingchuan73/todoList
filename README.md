@@ -38,7 +38,7 @@ todoList/
 │   ├── React/             # React 版本
 │   ├── Vue/               # Vue 版本
 │   ├── Angular/           # Angular 版本
-│   └── Vanilla JS/        # 原生 JavaScript 版本
+│   └── Vanilla/           # 原生 JavaScript 版本
 └── dist/                  # 构建产物
 ```
 
@@ -84,7 +84,7 @@ npm start
 #### 4. Vanilla JS 版本
 
 ```bash
-cd examples/Vanilla JS
+cd examples/Vanilla
 npm install
 npm run dev
 ```

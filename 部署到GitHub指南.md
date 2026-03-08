@@ -86,7 +86,7 @@ npm run build
 cd ../..
 
 # 构建 Vanilla JS
-cd examples/Vanilla JS
+cd examples/Vanilla
 npm install
 npm run build
 cd ../..
@@ -176,9 +176,9 @@ jobs:
           npm run build -- --base-href /todoList/
           cd ../..
 
-      - name: Install Vanilla JS dependencies and build
+      - name: Install Vanilla dependencies and build
         run: |
-          cd examples/Vanilla JS
+          cd examples/Vanilla
           npm install
           npm run build
           cd ../..

@@ -7,13 +7,13 @@
     "dev:react": "cd examples/React && npm run dev",
     "dev:vue": "cd examples/Vue && npm run dev",
     "dev:angular": "cd examples/Angular && npm start",
-    "dev:vanilla": "cd examples/Vanilla JS && npm run dev",
+    "dev:vanilla": "cd examples/Vanilla && npm run dev",
     "build:react": "cd examples/React && npm run build",
     "build:vue": "cd examples/Vue && npm run build",
     "build:angular": "cd examples/Angular && npm run build -- --base-href /todoList/",
-    "build:vanilla": "cd examples/Vanilla JS && npm run build",
+    "build:vanilla": "cd examples/Vanilla && npm run build",
     "build:all": "npm run build:react && npm run build:vue && npm run build:angular && npm run build:vanilla",
-    "install:all": "cd examples/React && npm install && cd ../Vue && npm install && cd ../Angular && npm install && cd ../Vanilla JS && npm install",
+    "install:all": "cd examples/React && npm install && cd ../Vue && npm install && cd ../Angular && npm install && cd ../Vanilla && npm install",
     "deploy": "gh-pages -d . -t true"
   },
   "keywords": [
