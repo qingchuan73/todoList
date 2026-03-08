@@ -64,16 +64,16 @@ npm run install:all
 
 ### 运行单个框架版本
 ```bash
-# React 版本 (http://localhost:5173)
+# React 版本 
 npm run dev:react
 
-# Vue 版本 (http://localhost:5173)
+# Vue 版本 
 npm run dev:vue
 
-# Angular 版本 (http://localhost:4200)
+# Angular 版本 
 npm run dev:angular
 
-# Vanilla JS 版本 (http://localhost:8080)
+# Vanilla JS 版本 
 npm run dev:vanilla
 ```
 
